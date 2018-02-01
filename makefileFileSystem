@@ -1,0 +1,2 @@
+all:
+	g++ -g -DTEST_FILESYSTEM FileSystem.cpp -o a.out

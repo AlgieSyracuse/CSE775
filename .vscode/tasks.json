@@ -1,0 +1,48 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "makeFileSystemTest",
+            "type": "shell",
+            "command": "make",
+            "args": ["-f", "makefileFileSystemTest"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "makeFileSystem",
+            "type": "shell",
+            "command": "make",
+            "args": ["-f", "makefileFileSystem"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++-5",
+            "args": [
+                "-DTEST_FILESYSTEM",
+                "-std=c++0x",
+                "-pthread",
+                "-g",
+                "~/CodeProjects/FileSystem/FileSystem.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

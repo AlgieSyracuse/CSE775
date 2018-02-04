@@ -1,2 +1,4 @@
 all:
 	g++ -g -DTEST_FILESYSTEM FileSystem.cpp -o a.out
+clean:
+	rm -rf a.out

@@ -11,8 +11,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": ["$gcc"]
+            }
         },
         {
             "label": "makeFileSystem",
@@ -22,8 +21,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": ["$gcc"]
+            }
         },
         {
             "label": "build",
@@ -39,10 +37,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            }
         }
     ]
 }

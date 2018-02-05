@@ -765,7 +765,7 @@ int main(int argc, char* argv[])
 
   // Display contents of non-current directory
 
-  std::string selectedPath = std::string(getenv("HOME")) + "/hgCode/FileSystem";
+  std::string selectedPath = std::string(getenv("HOME")) + "/vsc_dev/cpp/hello";
   std::cout << "\n  files residing in " + selectedPath;
   currfiles = d.getFiles(selectedPath, "*.*");
   for(size_t i=0; i<currfiles.size(); ++i)
@@ -862,8 +862,8 @@ int main(int argc, char* argv[])
   }
   else
   {
-    fn1 = std::string(getenv("HOME")) + "/NetBeansProjects/FileSystem/FileSystem.h";
-    fn2 = std::string(getenv("HOME")) + "/NetBeansProjects/FileSystem/FileSystem.cpp";
+    fn1 = std::string(getenv("HOME")) + "/vsc_dev/cpp/ComponentDemo-Linux/Component/Component.cpp";
+    fn2 = std::string(getenv("HOME")) + "/vsc_dev/cpp/ComponentDemo-Linux/ComponentExplicitClient/Explicit_Load_Component.cpp";
   }
   FileInfo fi1(fn1);
   FileInfo fi2(fn2);
@@ -903,8 +903,9 @@ int main(int argc, char* argv[])
 
   // copy binary file from one directory to another
 
-  std::string src = Directory::getCurrentDirectory() + "/src";
-  std::string dst = Directory::getCurrentDirectory() + "/dst";
+  std::string src = Directory::getCurrentDirectory() + "/src/a.out";
+  std::string dst = Directory::getCurrentDirectory() + "/dst/b.out";
+  
   File me(src);
   me.open(File::in, File::binary);
   std::cout << "\n  copying:\n    " << me.name().c_str() << "\n  to:\n    " << dst;
